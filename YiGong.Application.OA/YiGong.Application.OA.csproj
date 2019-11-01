@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>bin\Debug\YiGong.Application.OA.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\YiGong.Core\YiGong.Core.csproj" />
+    <ProjectReference Include="..\YiGong.EntityFrameworkCore.OA\YiGong.EntityFrameworkCore.OA.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OAFileCommon\Dto\" />
+    <Folder Include="SMS\Dto\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jiguang.JPush" Version="1.2.3" />
+  </ItemGroup>
+
+</Project>
